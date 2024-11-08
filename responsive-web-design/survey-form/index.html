@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>bcc fanclub application</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 id="title">bcc fanclub application</h1>
+        <p id="description">&star; <em>~ join the club ~</em> &star;</p>
+      </header>
+      <form id="survey-form">
+        <label id="name-label" for="name">name (required): 
+          <input id="name" type="text" name="name" placeholder="johnny survey" required />
+        </label>
+        <label id="email-label" for="email">email (required): 
+          <input id="email" type="email" name="email" placeholder="email@email.com" required />
+        </label>
+        <label id="number-label" for="number">age: 
+          <input id="number" type="number" name="number" min="13" max="150" placeholder="45" />
+        </label>
+        <label id="dropdown-label" for "dropdown">favorite bcc member:
+          <select id="dropdown" name="dropdown">
+            <option value="" invalid>(select one)</option>
+            <option value="1">bryan danielson</option>
+            <option value="2">claudio castagnoli</option>
+            <option value="3">jon moxley</option>
+            <option value="4" disabled>william regal</option>
+            <option value="5">wheeler yuta</option>
+          </select>
+        </label>
+        <fieldset id="radio-fieldset">desired gift:
+          <label id="shirt-label" class="picker-label" for="shirt">
+            <input id="shirt" class="picker" type="radio" name="gift" value="shirt" checked /> shirt
+          </label>
+          <label id="poster-label" class="picker-label" for="shirt">
+            <input id="poster" class="picker" type="radio" name="gift" value="poster" /> poster
+          </label>
+        </fieldset>
+        <fieldset id="checkbox-fieldset">2024 ppvs watched:
+          <label id="revolution-label" class="picker-label" for="revolution">
+            <input id="revolution" class="picker" type="checkbox" name="ppvs" value="1" checked /> revolution
+          </label>
+          <label id="dynasty-label" class="picker-label" for="dynasty">
+            <input id="dynasty" class="picker" type="checkbox" name="ppvs" value="2" /> dynasty
+          </label>
+          <label id="don-label" class="picker-label" for="don">
+            <input id="don" class="picker" type="checkbox" name="ppvs" value="3" /> double or nothing
+          </label>
+          <label id="door-label" class="picker-label" for="door">
+            <input id="door" class="picker" type="checkbox" name="ppvs" value="4" /> forbidden door
+          </label>
+          <label id="all-in-label" class="picker-label" for="all-in">
+            <input id="all-in" class="picker" type="checkbox" name="ppvs" value="5" /> all in
+          </label>
+          <label id="all-out-label" class="picker-label" for="all-out">
+            <input id="all-out" class="picker" type="checkbox" name="ppvs" value="6" /> all out
+          </label>
+          <label id="dream-label" class="picker-label" for="dream">
+            <input id="dream" class="picker" type="checkbox" name="ppvs" value="7" /> wrestledream
+          </label>
+          <label id="full-gear-label" class="picker-label" for="full-gear">
+            <input id="full-gear" class="picker" type="checkbox" name="ppvs" value="8" disabled /> full gear
+          </label>
+          <label id="worlds-end-label" class="picker-label" for="worlds-end">
+            <input id="worlds-end" class="picker" type="checkbox" name="ppvs" value="9" disabled /> world's end
+          </label>
+        </fieldset>
+        <label id="textarea-label" for="textarea">favorite match:
+          <textarea id="textarea" placeholder="tell us about it"></textarea>
+        </label>
+        <button id="submit" type="submit">&hearts; <em>apply</em> &hearts;</button>
+      </form>
+    </main>
+  </body>
+</html>

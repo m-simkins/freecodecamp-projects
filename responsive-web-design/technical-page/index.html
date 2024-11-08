@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>css quick guide</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>css quick guide</header>
+      <ul>
+        <li><a href="#html_boilerplate" class="nav-link">html boilerplate</a></li>
+        <li><a href="#device_width_breakpoints" class="nav-link">device width breakpoints</a></li>
+        <li><a href="#testing_backgrounds" class="nav-link">testing backgrounds</a></li>
+        <li><a href="#google_fonts" class="nav-link">google fonts</a></li>
+        <li><a href="#web_safe_colors" class="nav-link">web safe colors</a></li>
+        <li><a href="#flexbox_properties" class="nav-link">flexbox properties</a></li>
+        <li><a href="#variables" class="nav-link">variables</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <div class="already-done">
+      <section class="main-section" id="html_boilerplate">
+        <header>html boilerplate</header>
+        <p>"but the title of the page is css quick guide, not html!" yeah yeah yeah, well you need this too, so might as well have it here:</p>
+        <code class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt; 
+    &lt;meta charset="UTF-8" /&gt; 
+    &lt;title&gt;Hello, world!&lt;/title&gt; 
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt; 
+    &lt;meta name="description" content="" /&gt; 
+    &lt;link rel="stylesheet" type="text/css" href="style.css" /&gt; 
+    &lt;link rel="icon" href="favicon.png" /&gt; 
+  &lt;/head&gt; 
+  &lt;body&gt; 
+    &lt;h1>Hello, world!&lt;/h1&gt; 
+  &lt;/body&gt; 
+&lt;/html&gt;</code>
+        <p>the stylesheet link connects our css file to our html file. the viewport meta lets us know the user's screen size so we can use media queries to set different layouts for different screen sizes</p>
+      </section>
+      <section class="main-section" id="device_width_breakpoints">
+        <header>device width breakpoints</header>
+        <p>these are commonly used screen widths within <code>@media</code> queries for various devices:</p>
+        <ul>
+          <li><strong>320px - 480px</strong> for <em>mobile devices</em></li>
+          <li><strong>481px - 768px</strong> for <em>ipads / tablets</em></li>
+          <li><strong>769px - 1024px</strong> for <em>small screens / laptops</em></li>
+          <li><strong>1025px - 1200px</strong> for <em>desktops / large screens</em></li>
+          <li><strong>1201px +</strong> for <em>extra large screens / TV</em></li>
+        </ul>
+        <p>for example, our css file for this site uses <code>@media (min-width: 768px)</code> to change the layout for desktop users</p>
+      </section>
+      <section class="main-section" id="testing_backgrounds">
+        <header>testing backgrounds</header>
+        <p>i know for a fact that there are more efficient ways to test out how colors look on light mode vs dark mode, but i'm not that far along in my studies yet so i am utilizing <code>linear-gradient</code></p>
+        <p>this is my syntax of choice:</p>
+        <code class="code-block">body {
+  background: linear-gradient(
+    to right,
+    #ffc 0%,
+    #ffc 50%,
+    #033 50%,
+    #033 100%
+  );
+}</code>
+        <p>i'm excited to learn more about how to toggle between light and dark mode so i don't have to do this</p>
+      </section>
+      <section class="main-section" id="google_fonts">
+        <header>google fonts</header>
+        <p>to add google fonts, add <code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FAMILYNAME"&gt;</code> to your <code>&lt;head&gt;</code> element</p>
+        <p>to add multple fonts, use pipes to separate multiple <code>FAMILYNAME</code>s</p>
+        <p>don't forget to put <code>FAMILYNAME</code> in quotes when you use it in your css code</p>
+      </section>
+      <section class="main-section" id="web_safe_colors">
+        <header>web safe colors</header>
+        <p>the 216 web safe colors used to be the standard palette for older computers and browsers. now you can use millions of colors, but i still enjoy using web safe colors because of their ease to code and their limitations that prevent me from getting too overwhelmed deciding what the perfect color is</p>
+        <p>this page makes use of the colors <code>#ffc</code>, <code>#f63</code>, 
+<code>#f93</code>, <code>#fc3</code>, <code>#9c3</code>, <code>#6cc</code>, <code>#366</code>, and <code>#033</code></p>
+      </section>
+      <section class="main-section" id="flexbox_properties">
+        <header>flexbox properties</header>
+        <p>i always think i have my head wrapped around flexbox until i try to use it</p>
+        <p>to make an element use flexbox, add <code>display: flex;</code> to the parent's css</p>
+        <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties">this page</a> from css tricks is an excellet guide to working with various flexbox properties</p>
+      </section>
+      <section class="main-section" id="variables">
+        <header>variables</header>
+        <p>you declare variables in the <code>:root</code> selector so they can be accessed by all of the other selectors</p>
+        <p>use this syntax to declare a variable:</p>
+        <code class="code-block">:root {
+  --variable-name: value;
+}</code>
+        <p>and use <em>this</em> syntax to call the variable:</p>
+        <code class="code-block">selector {
+  property: var(--variable-name);
+}</code>
+      <p>as an example, this is how to give an element stripes in two variable colors:</p>
+      <code class="code-block">:root {
+  --first-color: #f93;
+  --second-color: #f63;
+}
+
+#example {
+  width: 50vw;
+  height: 30vh;
+  margin: 0.5rem 2rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background: repeating-linear-gradient(
+      var(--first-color),
+      var(--first-color) 5%,
+      var(--second-color) 5%,
+      var(--second-color) 10%
+    );
+}</code>
+        <p>that code results in this:</p>
+        <div id="example"></div>
+        <p>these variables make it much easier to change the color of the stripes if i want to - if i decide i don't like the first color, i don't have to go through and find everywhere it's used and update it multiple times, i simply go to the <code>:root</code> selector and update the value of <code>--first-color</code>.</p>
+      </section>
+    </div>
+  </main>
+  </body>
+</html>

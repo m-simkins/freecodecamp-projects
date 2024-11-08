@@ -1,0 +1,164 @@
+:root {
+  --first-color: #f93;
+  --second-color: #f63;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+  
+body {
+  background-color: #366;
+  color: #033;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  min-width: 320px;
+}
+  
+#navbar {
+  text-align: center;
+  border: 1px solid #033;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  margin-bottom: 0.25em;
+}
+  
+#navbar header {
+  background-color: #9c3;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+  
+#navbar ul {
+  font-size: 1.25em;
+}
+  
+#navbar li {
+  background-color: #fc3;
+  list-style-type: none;
+  padding: 0.25em;
+  border-top: 1px solid #033;
+}
+  
+#navbar li:last-of-type {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+  
+.nav-link {
+  color: #033;
+  text-decoration: none;
+}
+  
+#main-doc {
+  margin: 0 0.5em;
+}
+  
+.main-section {
+  background-color: #6cc;
+  border: 1px solid #033;
+  border-radius: 0.5em;
+  margin: 0.5em auto;
+}
+  
+.main-section header {
+  background-color: #f93;
+  font-size: 1.25em;
+  text-align: center; 
+  padding: 0.5em;
+  border-bottom: 1px solid #033;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+  
+.main-section p {
+  margin: 0.5em;
+}
+  
+code {
+  background-color: #033;
+  color: #ffc;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  padding: 0 0.25rem;
+  vertical-align: middle;
+}
+  
+.code-block {
+  display: block;
+  margin: 0.5rem 2rem;
+  padding: 0.25rem;
+  white-space: pre;
+  text-wrap: wrap;
+  width: fit-content;
+}
+
+.main-section ul {
+  background-color: #f63;
+  color: #ffc;
+  margin: 0.5em 2rem;
+  list-style-type: none;
+  border-radius: 0.5rem;
+  padding: 0.25em 0.5em;
+  width: fit-content;
+}
+
+.main-section li {
+  padding: 0.25em 0;
+}
+
+.main-section a {
+  color: #ffc;
+  background-color: #f63;
+  text-decoration: none;
+  border-radius: 0.5em;
+  padding: 0 0.25em;
+}
+
+#example {
+  width: 50vw;
+  height: 30vh;
+  margin: 0.5rem 2rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background: repeating-linear-gradient(
+    var(--first-color),
+    var(--first-color) 5%,
+    var(--second-color) 5%,
+    var(--second-color) 10%
+  );
+}
+  
+@media screen and (min-width: 769px) {
+  
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 330px;
+  }
+  
+  #navbar li {
+    text-align: right;
+    padding-right: 0.5em;
+  }
+  
+  #main-doc {
+    padding: 10px;
+    padding-bottom: 0;
+    margin-top: -0.5em;
+    margin-right: 0;
+    margin-left: 340px;
+  }
+
+  .code-block {
+    width: fit-content;
+  }
+
+  .main-section ul {
+    width: fit-content;
+  }
+  
+}

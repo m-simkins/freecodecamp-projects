@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fc0;
+  color: #033;
+  font-family: 'Tahoma', sans-serif;
+}
+
+main {
+  border: 10px solid #033;
+  background-color: #033;
+  border-radius: 40px;
+  padding-bottom: 0.5rem;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto
+}
+
+header {
+  background-color: #9c3;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#title {
+  padding-top: 0.25rem;
+}
+
+#description {
+  margin-top: -0.5rem;
+  padding-bottom: 1rem;
+}
+
+form {
+  background-color: #f93;
+  padding-bottom: 0.5rem;
+  max-width: 600px;
+  margin: -0.5rem auto;
+}
+
+input, select, textarea {
+  border-radius: 10px;
+}
+
+header, form {
+  border: 20px solid ;
+  border-radius: 40px ;
+}
+
+label {
+  display: block;
+  padding: 0.5rem 0 0 0.75rem;
+}
+
+input, select, textarea, button {
+  display: block;
+  background-color: #f99;
+  margin: 0.75rem 0 0.25rem 0;
+  padding: 0.25rem;
+  border: 1px dotted #033;
+  font-size: 0.85rem;
+}
+
+input::placeholder {
+  color: #0338;
+}
+
+fieldset {
+  border: none;
+}
+
+.picker {
+  display: inline;
+  vertical-align: middle;
+  margin: 0 0 0 -1rem;
+}
+
+.picker-label {
+  font-size: 0.85rem;
+}
+
+button {
+  display: block;
+  width: 50%;
+  margin: 1rem auto 0 auto;
+  background-color: #9c3;
+}
